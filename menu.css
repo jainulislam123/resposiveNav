@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden; 
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    position: relative;
+ 
+ 
+}
+.header{
+    /* padding: ; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background-color:cadetblue;
+    padding: 0 2rem;
+    width: 100%;
+   
+}
+.logo{
+    width: 80px;
+    height: auto; 
+}
+.logo img{
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+/* .logo img:hover{
+    box-shadow:none;
+    transition: all 0.3s;
+} */
+.navBar ul{
+    display: flex;
+    gap: 2.4rem;
+    font-size: 20px;
+
+}
+
+.navBar ul a{
+    color: azure;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-shadow: 2px 3px 1px black;
+    transition: all 0.3s;
+}
+.navBar ul a:hover{
+    text-shadow: 2px 3px 1px rgb(236, 118, 118);
+}
+
+
+.heroSection,.ServiceSection{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:blueviolet;
+    width: 100%;
+}
+.ServiceSection{
+    background-color:rgb(12, 61, 84); 
+}
+.heroSection,.ServiceSection p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-variant:small-caps;
+    color: blanchedalmond;
+    font-size: 2rem;
+}
+
+.icons{
+    font-size: 1.2rem;
+    color: azure;
+    cursor: pointer;
+    display: none;
+
+}
+
+.icons .fa-xmark{
+    display: none;
+ }
+/*
+===============================================================
+Responsive
+===============================================================
+*/
+@media (max-width:900px) {
+    .icons{
+        display: block;
+        border: 2px solid rgb(229, 222, 222);
+        padding:  5px 1rem;
+        z-index: 999;
+    }
+    .navBar{
+   /* display: none; */
+   background-color: rgba(160, 95, 120, 0.504);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 90vh;
+   text-align: center;
+   position: absolute;
+   top: 0;
+   left: 0;
+   backdrop-filter: blur(5px);
+   transform: translateX(100%);
+   transition: all .9s cubic-bezier(0.075, 0.82, 0.165, 1)
+ 
+}
+.navBar ul{
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    
+}
+/* .icons .fa-xmark{
+    display: block;
+ } */
+/* .icons .fa-bars{
+    display: none;
+ } */
+.active{
+    transform: translateX(0%);
+}
+}
